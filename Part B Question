@@ -1,0 +1,21 @@
+problem statement:
+Let's say you are running the lock/unlock in a multi core machine. Now you
+want to let multiple threads to run lock() As we saw in part A, locking a
+ node has multiple validations inside. Will doing lock on two nodes
+cause a race condition. If yes, how will you solve it. In short, how do
+make the lock() function thread safe? - Multiple threads running it
+simultaneously shouldn't not affect the correctness. - Try to make the
+critical sections more granular. ie. don't create any big
+atomic/synchronised blocks that will make parallelism suffer. Consider
+each operation is atomic.
+
+Also Note that:
+Your task is to implement the lockNode function to ensure thread safety without using any language-provided multi-threading APIs. You are only allowed to use atomic operations.
+You cannot use syncronized block/method
+make sure your critical section time complexity is O(1). that means any thread should wait for O(1) time only.
+
+assume that increment is an atomic operator in what ever language you choose, can you implement thread safety 
+
+you don’t need to use ReentrantLock or AtomicInteger, just consider increment operation is atomic, not even synchronized block. you should not use any language provided multi threading api.
+
+consider Always assumption is increment and decrement are atomic
