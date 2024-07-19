@@ -16,6 +16,6 @@ make sure your critical section time complexity is O(1). that means any thread s
 
 assume that increment is an atomic operator in what ever language you choose, can you implement thread safety 
 
-you don’t need to use ReentrantLock or AtomicInteger, just consider increment operation is atomic, not even synchronized block. you should not use any language provided multi threading api.
+you don’t need to use ReentrantLock or etc, just consider increment operation is atomic, not even synchronized block. you should not use any language provided multi threading api.
 
 consider Always assumption is increment and decrement are atomic
